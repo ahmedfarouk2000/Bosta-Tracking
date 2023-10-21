@@ -1,0 +1,169 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aquamarine; */
+  height: 300px;
+  margin: 32px 0px;
+
+  margin-top: 140px;
+}
+
+.card {
+  /* background-color: red; */
+  width: 85%;
+  height: 100%;
+  border: solid 0.1px var(--main-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 0px 32px; */
+}
+
+.card-details {
+  flex: 1;
+  /* background-color: bisque; */
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+}
+
+.card-details-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-details-label {
+  color: var(--main-gray-2);
+  font-size: 16px;
+}
+
+.card-details-info {
+  font-size: 18px;
+}
+
+.card-track {
+  flex: 1;
+  /* background-color: blue; */
+  border-top: solid 0.1px var(--main-gray);
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.card-track-line {
+  flex: 1;
+  /* background-color: aqua; */
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0px 12px; */
+}
+
+.card-track-details {
+  flex: 1;
+  /* background-color: blueviolet; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-track-details h2 {
+  font-size: 16px;
+}
+
+.current-status {
+  /* background-color: blue; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.current-status-last {
+  /* background-color: blue; */
+  /* flex: 1; */
+  display: flex;
+  align-items: center;
+}
+
+.current-status-circle-big {
+  background-color: var(--main-red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.current-status-circle-small {
+  background-color: var(--main-red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+
+.current-status-circle .truck {
+  width: 100%;
+  /* transform: rotateY(180deg); */
+  /* must take into conisderation the direction of the car */
+}
+
+.current-status-line {
+  height: 6px;
+  width: 100%;
+  background-color: var(--main-gray);
+}
+
+/* .flex-row{
+  flex-direction: row;
+}
+
+.flex-row-reverse{
+  flex-direction: row-reverse;
+} */
+
+@media only screen and (max-width: 1024px) {
+  .card-wrapper {
+    height: auto;
+  }
+  .card-details {
+    flex-direction: column-reverse !important;
+    /* min-height: 600px; */
+    row-gap: 32px;
+  }
+
+  .card-details-label,
+  .card-details-info {
+    text-align: center !important;
+  }
+
+  .current-status {
+    flex-direction: column !important;
+    flex: 1;
+  }
+
+  .card-track-line {
+    flex-direction: column !important;
+  }
+
+  .current-status-line {
+    height: 100px;
+    width: 6px;
+    background-color: var(--main-gray);
+  }
+
+  .card-track {
+    flex-direction: row-reverse;
+  }
+  .card-track-details {
+    flex-direction: column-reverse !important;
+  }
+
+  .card-track-details h2 {
+    text-align: center !important;
+  }
+}

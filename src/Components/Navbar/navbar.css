@@ -1,7 +1,14 @@
 .nav-wrapper {
+  position: fixed;
   display: flex;
   justify-content: center;
   border-bottom: solid 0.1px var(--main-gray);
+  /* background-color: red; */
+  background-color: white;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 
 .navbar {
@@ -16,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 32px;
+  /* background-color: red; */
 }
 
 .navbar-group-logo {
@@ -26,6 +34,88 @@
 
 .navbar-group a {
   font-size: 18px;
+  padding: 16px 10px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.track-container {
+  position: relative;
+}
+
+.navbar-group .track-shipment {
+  border-top: 0.1px solid transparent;
+  border-left: 0.1px solid transparent;
+  border-right: 0.1px solid transparent;
+  transition: 0.6s all;
+}
+
+.navbar-group .track-shipment-open {
+  border-top: 0.1px solid var(--main-gray);
+  border-left: 0.1px solid var(--main-gray);
+  border-right: 0.1px solid var(--main-gray);
+  transition: 0.6s all;
+}
+
+.search-shipment {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+
+  border-radius: 0px 10px 10px 10px;
+  border: 0.1px solid var(--main-gray);
+  background-color: white;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 330px;
+  transition: 0.6s width ease-in;
+  visibility: visible;
+}
+
+.search-shipment-close {
+  background-color: white;
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  border-width: 0px;
+  padding: 32px;
+  width: 100px;
+  transition: 0.6s width ease-in;
+  visibility: hidden;
+}
+
+.search-shipment h2 {
+  font-size: 18px;
+}
+
+.search-input-container {
+  /* background-color: red; */
+  display: flex;
+  border: 0.1px solid var(--main-gray);
+  border-radius: 10px;
+  /* background-color: red; */
+  overflow: hidden;
+}
+
+.search-input-container .search-icon {
+  flex: 1;
+  background-color: var(--main-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-input-container .search-input {
+  all: unset;
+  flex: 5;
+  padding: 0px 18px;
 }
 
 a.langaue {
@@ -49,11 +139,12 @@ a.logo-text {
   cursor: pointer;
 }
 
-.navbar-group a {
+a:not(.logo-text) {
   position: relative;
+  text-align: center;
 }
 
-.navbar-group a:after {
+a:not(.logo-text):after {
   content: "";
   position: absolute;
   width: 100%;
@@ -66,7 +157,7 @@ a.logo-text {
   transition: transform 0.4s ease-in-out;
 }
 
-.navbar-group a:hover:after {
+a:not(.logo-text):hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -75,4 +166,107 @@ a.logo-text {
   width: 0.5px;
   height: 50%;
   background-color: var(--main-gray);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.list-closed {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  z-index: 999;
+  overflow: hidden;
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 48px;
+  border-left: 0.1px solid var(--main-gray);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  transition: 0.6s all ease-in;
+}
+
+.list {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 48px;
+  border-left: 0.1px solid var(--main-gray);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  transition: 0.6s all ease-in;
+}
+
+.list a {
+  padding: 12px 10px;
+}
+
+.list-toggle-icon {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  z-index: 9999;
+  display: none;
+}
+.list-toggle-icon img {
+  width: 100%;
+}
+
+.navbar-layer {
+  position: fixed;
+  background-color: #323232cc;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.6s all ease-in;
+}
+
+.navbar-layer-closed {
+  position: fixed;
+  background-color: #323232cc;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s all ease-in;
+}
+
+@media only screen and (max-width: 1024px) {
+  .list-toggle-icon {
+    display: block;
+  }
+
+  .navbar-group {
+    display: none;
+  }
 }

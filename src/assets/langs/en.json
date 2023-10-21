@@ -13,5 +13,28 @@
   "Arrival Date": "Arrival Date",
 
   "Shipment Cancelled": "Shipment Cancelled",
-  "Shipment Delivered": "Shipment Delivered"
+  "Shipment Delivered": "Shipment Delivered",
+  "Sipment Has Not Been Sent": "Sipment Has Not Been Sent",
+
+  "Sipment Created": "Shipment Created",
+  "Shipment Received by Buyer": "Shipment Received by Buyer",
+  "Sipment Out For Delivary": "Sipment Out For Delivary",
+  "Shipment Delivered 2": "Shipment Delivered",
+
+  "Customer Not Present at Address": "Customer Not Present at Address",
+  "Shipment Canceled by Merchant": "Shipment Canceled by Merchant",
+
+  "Shipment Address": "Shipment Address",
+  "Is There an Issue With Your Shipment?!": "Is There an Issue With Your Shipment ?!",
+  "Report a Problem": "Report a Problem",
+
+  "Address": "Palm Street, Riyadh District, Cairo City, Arab Republic of Egypt Palm Street, Riyadh District, Cairo City, Arab Republic of Egypt",
+
+  "Shipment Details": "Shipment Details",
+  "Branch": "Branch",
+  "Date": "Date",
+  "Time": "Time",
+  "Details": "Details",
+
+  "Tracking No.": "Tracking No."
 }

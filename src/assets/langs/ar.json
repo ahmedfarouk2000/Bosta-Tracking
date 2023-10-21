@@ -13,5 +13,28 @@
   "Arrival Date": "موعد التسليم خلال",
 
   "Shipment Cancelled": "تم الغاء الشحنه",
-  "Shipment Delivered": "تم تسليم الشحنة"
+  "Shipment Delivered": "تم تسليم الشحنة",
+  "Sipment Has Not Been Sent": "لم يتم ارسال الشحنة",
+
+  "Sipment Created": "تم انشاء الشحنة",
+  "Shipment Received by Buyer": "تم استلام الشحنة من التاجر",
+  "Sipment Out For Delivary": "الشحنة خرجت للتسليم",
+  "Shipment Delivered 2": "تم الاستلام",
+
+  "Customer Not Present at Address": "العميل غير متواجد في العنوان",
+  "Shipment Canceled by Merchant": "تم الغاء الشحنة من التاجر",
+
+  "Shipment Address": "عنوان التسليم",
+  "Is There an Issue With Your Shipment?!": "!هل يوجد مشكلة  في شحنتك ؟",
+  "Report a Problem": "إبلاغ عن مشكلة",
+
+  "Address": "شار ع النخل، حي الرياض، مدينة القاهرة، جمهورية مصر العربية شار ع النخل، حي الرياض، مدينة القاهرة، جمهورية مصر العربية",
+
+  "Shipment Details": "تفاصيل الشحنة",
+  "Branch": "الفرع",
+  "Date": "التاريخ",
+  "Time": "الوقت",
+  "Details": "تفاصيل",
+
+  "Tracking No.": "رقم التتبع"
 }

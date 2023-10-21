@@ -2,9 +2,11 @@
   --main-red: #e30613;
   --main-gray: rgba(128, 128, 128, 0.4);
   --main-gray-2: rgba(128, 128, 128, 0.8);
+  --main-gray-light: rgba(128, 128, 128, 0.1);
 }
 h1,
-h2 {
+h2,
+p {
   margin: 0;
 }
 a {
