@@ -28,7 +28,7 @@
   "Is There an Issue With Your Shipment?!": "Is There an Issue With Your Shipment ?!",
   "Report a Problem": "Report a Problem",
 
-  "Address": "Palm Street, Riyadh District, Cairo City, Arab Republic of Egypt Palm Street, Riyadh District, Cairo City, Arab Republic of Egypt",
+  "Address": "Building 2, Apartment 10, 5th Floor, Al-Nakhil Street, Al-Riyadh District, Next to Al-Wensh Supermarket, Cairo, Arab Republic of Egypt",
 
   "Shipment Details": "Shipment Details",
   "Branch": "Branch",
@@ -55,5 +55,9 @@
 
   "Nasr City": "Nasr City",
 
-  "Amazon": "Amazon"
+  "Amazon": "Amazon",
+
+  "Shipment No. 2": "Shipment No.",
+
+  "is Not Found": "is Not Found"
 }

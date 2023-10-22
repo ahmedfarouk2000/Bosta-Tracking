@@ -57,8 +57,6 @@ const TrackingCard = () => {
   const currentTruck = useSelector((state) => state.CurrentTruck);
 
   useEffect(() => {
-    // console.log("the currentTruck from trcking Card: ", currentTruck);
-
     setCurrentTruckState(getTruckStatus(currentTruck?.CurrentStatus?.state));
   }, [currentTruck]);
 
@@ -259,7 +257,10 @@ const TrackingCard = () => {
             </div>
 
             <div className="card-track">
-              <div className="card-track-line" style={directionSection}>
+              <div
+                className="card-track-line big-screen"
+                style={directionSection}
+              >
                 {Array.from({ length: trackingLength }, (_, index) =>
                   index != trackingLength - 1 ? (
                     <div
@@ -268,7 +269,7 @@ const TrackingCard = () => {
                           ? "current-status-last"
                           : "current-status"
                       }
-                      // key={index}
+                      key={index}
                     >
                       <div
                         className={`${
@@ -368,6 +369,93 @@ const TrackingCard = () => {
                       ) : (
                         <></>
                       )}
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div className="card-track-line small-screen">
+                {Array.from({ length: trackingLength }, (_, index) =>
+                  index != 0 ? (
+                    <div className="current-status" key={index}>
+                      <div
+                        className={`${
+                          currentTruckState.statusWord == "Shipment Delivered"
+                            ? "current-status-circle-small"
+                            : index == 1 || index == 0
+                            ? "current-status-circle-big"
+                            : "current-status-circle-small"
+                        } 
+                       ${
+                         currentTruckState.statusWord != "Shipment Delivered" &&
+                         index >= 1
+                           ? currentTruckState?.statusBackgroundColor
+                           : currentTruckState.statusWord ==
+                             "Shipment Delivered"
+                           ? currentTruckState?.statusBackgroundColor
+                           : "status-background-color-gray"
+                       }`}
+                      >
+                        {currentTruckState.statusWord ==
+                        "Shipment Delivered" ? (
+                          <img src={check} alt="" />
+                        ) : index == 1 ? (
+                          <img
+                            className="truck"
+                            src={truck}
+                            alt=""
+                            style={directionTruck}
+                          />
+                        ) : index == 0 ? (
+                          <img src={box} alt="" />
+                        ) : (
+                          <img src={check} alt="" />
+                        )}
+                      </div>
+
+                      <div
+                        className={`current-status-line ${
+                          currentTruckState?.statusWord != "Shipment Delivered"
+                            ? index != 1
+                              ? currentTruckState?.statusBackgroundColor
+                              : "status-background-color-gray"
+                            : currentTruckState?.statusBackgroundColor
+                        }`}
+                      ></div>
+                    </div>
+                  ) : (
+                    <div className="current-status-last">
+                      <div
+                        className={`${
+                          currentTruckState.statusWord == "Shipment Delivered"
+                            ? "current-status-circle-small"
+                            : "current-status-circle-big"
+                        }  ${
+                          currentTruckState.statusWord !=
+                            "Shipment Delivered" && index >= 1
+                            ? currentTruckState?.statusBackgroundColor
+                            : currentTruckState.statusWord ==
+                              "Shipment Delivered"
+                            ? currentTruckState?.statusBackgroundColor
+                            : "status-background-color-gray"
+                        }`}
+                      >
+                        {currentTruckState.statusWord ==
+                        "Shipment Delivered" ? (
+                          <img src={check} alt="" />
+                        ) : index == 1 ? (
+                          <img
+                            className="truck"
+                            src={truck}
+                            alt=""
+                            style={directionTruck}
+                          />
+                        ) : index == 0 ? (
+                          <img src={box} alt="" />
+                        ) : (
+                          <img src={check} alt="" />
+                        )}
+                      </div>
                     </div>
                   )
                 )}

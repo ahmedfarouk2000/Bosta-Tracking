@@ -38,6 +38,8 @@
 .card-details-label {
   color: var(--main-gray-2);
   font-size: 16px;
+  font-family: "cairo-font2";
+  font-weight: 500;
 }
 
 .card-details-info {
@@ -109,23 +111,13 @@
 
 .current-status-circle .truck {
   width: 100%;
-  /* transform: rotateY(180deg); */
-  /* must take into conisderation the direction of the car */
 }
 
 .current-status-line {
   height: 6px;
   width: 100%;
-  background-color: var(--main-gray);
+  /* background-color: var(--main-gray); */
 }
-
-/* .flex-row{
-  flex-direction: row;
-}
-
-.flex-row-reverse{
-  flex-direction: row-reverse;
-} */
 
 .status-text-color-green {
   color: var(--main-green);
@@ -152,7 +144,15 @@
 }
 
 .status-background-color-gray {
-  background-color: var(--main-gray);
+  background-color: var(--main-gray-track);
+}
+
+.small-screen {
+  display: none;
+}
+
+.big-screen {
+  display: flex;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -182,7 +182,6 @@
   .current-status-line {
     height: 100px;
     width: 6px;
-    /* background-color: var(--main-gray); */
   }
 
   .card-track {
@@ -194,5 +193,13 @@
 
   .card-track-details h2 {
     text-align: center !important;
+  }
+
+  .small-screen {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+  .big-screen {
+    display: none;
   }
 }

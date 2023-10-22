@@ -24,9 +24,7 @@ const TruckingDetails = () => {
 
   const currentTruck = useSelector((state) => state.CurrentTruck);
 
-  useEffect(() => {
-    // console.log("the currentTruck from trcking Details: ", currentTruck);
-  }, [currentTruck]);
+  useEffect(() => {}, [currentTruck]);
 
   const currentLanguage = useSelector((state) => state.CurrentLanguage);
 
@@ -127,7 +125,7 @@ const TruckingDetails = () => {
 
                 {currentTruck?.TransitEvents?.map((item, index) =>
                   index != currentTruck?.TransitEvents?.length - 1 ? (
-                    <tr style={directionSection}>
+                    <tr style={directionSection} className="light-font">
                       <td
                         className={
                           currentLanguage ? "padding-left" : "padding-right"
@@ -158,7 +156,7 @@ const TruckingDetails = () => {
                       </td>
                     </tr>
                   ) : (
-                    <tr style={directionSection}>
+                    <tr style={directionSection} className="light-font">
                       <td
                         className={`remove-bottom-border ${
                           currentLanguage ? "padding-left" : "padding-right"

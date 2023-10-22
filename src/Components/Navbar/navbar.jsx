@@ -16,7 +16,6 @@ import { fetchTruckData } from "../../Store/TruckStore";
 
 import { Fade } from "react-reveal";
 import LoadingShipment from "../Loading Shipment/loadingShipment";
-// import Loading from "../Loading/loading";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -66,15 +65,20 @@ const Navbar = () => {
     dispatch(fetchTruckData(inputValue));
     toggleOpenSearch();
 
-    toggleIsLoading();
+    OpenIsLoading();
     setTimeout(() => {
-      toggleIsLoading();
-    }, 100);
+      CloseIsLoading();
+    }, 3000);
   };
 
   const [isLoading, setIsLoading] = useState(false);
-  const toggleIsLoading = () => {
-    setIsLoading(!isLoading);
+
+  const OpenIsLoading = () => {
+    setIsLoading(true);
+  };
+
+  const CloseIsLoading = () => {
+    setIsLoading(false);
   };
 
   const [inputValue, setInputValue] = useState(67151313);
@@ -84,6 +88,12 @@ const Navbar = () => {
 
   const reloadPage = () => {
     window.location.reload();
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      setCurrentTruckFun();
+    }
   };
 
   return (
@@ -100,7 +110,11 @@ const Navbar = () => {
           {openList ? <img src={x} alt="" /> : <></>}
         </div>
 
-        <div className="navbar-group-logo" style={direction}>
+        <div
+          className="navbar-group-logo"
+          style={direction}
+          onClick={reloadPage}
+        >
           <a className="logo-text">{t("Bosta")}</a>
           <div className="logo-img">
             <img src={bostaLoga} alt="bosta logo" />
@@ -157,6 +171,7 @@ const Navbar = () => {
                       style={directionText}
                       value={inputValue}
                       onChange={inputValueChange}
+                      onKeyPress={handleKeyPress}
                     />
                   </div>
                 </div>
@@ -169,14 +184,45 @@ const Navbar = () => {
               <a>{t("Main Page")}</a>
             </div>
 
-            <div
-              className="navbar-group-logo"
-              style={direction}
-              onClick={reloadPage}
-            >
-              <a className="logo-text">{t("Bosta")}</a>
-              <div className="logo-img">
+            <div className="navbar-group-logo" style={direction}>
+              <a className="logo-text" onClick={reloadPage}>
+                {t("Bosta")}
+              </a>
+              <div className="logo-img" onClick={reloadPage}>
                 <img src={bostaLoga} alt="bosta logo" />
+              </div>
+
+              <div className="track-container track-hidden">
+                <a
+                  className={
+                    openSearch ? "track-shipment-open" : "track-shipment"
+                  }
+                  style={{ color: openSearch ? "#e30613" : "" }}
+                  onClick={toggleOpenSearch}
+                >
+                  {t("Track Shipment")}
+                </a>
+
+                <div className={containerClass}>
+                  <h2 style={directionText}> {t("Track Shipment")}</h2>
+
+                  <div className="search-input-container" style={direction}>
+                    <div className="search-icon" onClick={setCurrentTruckFun}>
+                      <img src={search} alt="" />
+                    </div>
+
+                    <input
+                      className="search-input"
+                      type="number"
+                      inputmode="numeric"
+                      placeholder={t("Tracking No.")}
+                      style={directionText}
+                      value={inputValue}
+                      onChange={inputValueChange}
+                      onKeyPress={handleKeyPress}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

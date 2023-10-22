@@ -5,27 +5,35 @@ import TrackingCard from "../Tracking Card/trackingCard";
 import TruckingDetails from "../Trucking Details/truckingDetails";
 
 import { fetchTruckData } from "../../Store/TruckStore";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import NotFound from "../Not Found/notFound";
 
 const Home = () => {
-  // 7234258
-  // 67151313
-  // 13737343
-  const initialTruckId = 67151313;
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchTruckData(initialTruckId));
+    dispatch(fetchTruckData(currentTruckId));
   }, [dispatch]);
+
+  const currentTruck = useSelector((state) => state.CurrentTruck);
+
+  const currentTruckId = useSelector((state) => state.CurrentTruckId);
 
   return (
     <>
       <div className="home-container">
-        <Navbar></Navbar>
-
-        <TrackingCard></TrackingCard>
-        <TruckingDetails></TruckingDetails>
+        {currentTruck != null ? (
+          <>
+            <Navbar></Navbar>
+            <TrackingCard></TrackingCard>
+            <TruckingDetails></TruckingDetails>
+          </>
+        ) : (
+          <>
+            <Navbar></Navbar>
+            <NotFound></NotFound>
+          </>
+        )}
       </div>
     </>
   );

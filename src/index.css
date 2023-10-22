@@ -4,9 +4,11 @@
   --main-red-transparent: #c8353c99;
   --main-gray: rgba(128, 128, 128, 0.4);
   --main-gray-2: rgba(128, 128, 128, 0.8);
-  --main-gray-light: rgba(128, 128, 128, 0.1);
+  --main-gray-light: rgb(128 128 128 / 6%);
 
   --main-gray-lighter: rgba(128, 128, 128, 0.05);
+
+  --main-gray-track: rgb(128 128 128 / 25%);
 
   --main-yellow: #f9ba02;
   --main-green: #36b600;
@@ -23,9 +25,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: cairo-font1;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 16px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-red);
+  border-radius: 16px;
 }
 
 @font-face {
   font-family: cairo-font1;
   src: url("./assets/fonts/Cairo-Bold.ttf");
+}
+
+@font-face {
+  font-family: cairo-font2;
+  src: url("./assets/fonts/Cairo-Medium.ttf");
 }
