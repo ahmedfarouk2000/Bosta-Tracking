@@ -8,11 +8,12 @@
 .truck-details {
   width: 85%;
   /* background-color: red; */
-  height: 500px;
+  /* height: 500px; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 22px;
+  margin: 38px 0px;
 }
 
 .truck-details-left {
@@ -66,6 +67,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 12px;
+  transition: 0.4s all;
+}
+
+.truck-details-left-card-left button:hover {
+  background-color: var(--main-red-2);
 }
 
 .truck-details-left-card-right {
@@ -91,9 +98,22 @@
   /* background-color: blueviolet; */
 }
 
-.truck-details-table {
-  min-height: 350px;
+.truck-details-right h2,
+.truck-details-left h2 {
+  font-size: 20px;
 }
+
+.truck-details-right h3,
+.truck-details-left h3 {
+  font-size: 16px;
+}
+
+.truck-details-left-card-left h2 {
+  font-size: 16px;
+}
+/* .truck-details-left-card-left button {
+  font-size: 16px;
+} */
 
 .table-header {
   background-color: var(--main-gray-light);

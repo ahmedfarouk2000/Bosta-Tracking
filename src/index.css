@@ -1,8 +1,15 @@
 :root {
   --main-red: #e30613;
+  --main-red-2: #c8353d;
+  --main-red-transparent: #c8353c99;
   --main-gray: rgba(128, 128, 128, 0.4);
   --main-gray-2: rgba(128, 128, 128, 0.8);
   --main-gray-light: rgba(128, 128, 128, 0.1);
+
+  --main-gray-lighter: rgba(128, 128, 128, 0.05);
+
+  --main-yellow: #f9ba02;
+  --main-green: #36b600;
 }
 h1,
 h2,
@@ -15,6 +22,7 @@ a {
 body {
   margin: 0;
   padding: 0;
+  font-family: cairo-font1;
 }
 
 @font-face {

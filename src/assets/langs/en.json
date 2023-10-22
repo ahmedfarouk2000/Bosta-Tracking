@@ -22,7 +22,7 @@
   "Shipment Delivered 2": "Shipment Delivered",
 
   "Customer Not Present at Address": "Customer Not Present at Address",
-  "Shipment Canceled by Merchant": "Shipment Canceled by Merchant",
+  "Shipment Cancelled by Merchant": "Shipment Cancelled by Merchant",
 
   "Shipment Address": "Shipment Address",
   "Is There an Issue With Your Shipment?!": "Is There an Issue With Your Shipment ?!",
@@ -36,5 +36,24 @@
   "Time": "Time",
   "Details": "Details",
 
-  "Tracking No.": "Tracking No."
+  "Tracking No.": "Tracking No.",
+
+  "Date is Not Defined": "Date is Not Defined",
+
+  "TICKET_CREATED": "Ticket Created",
+  "PACKAGE_RECEIVED": "Package Received",
+  "IN_TRANSIT": "In Transit",
+  "OUT_FOR_DELIVERY": "Out For Delivery",
+  "WAITING_FOR_CUSTOMER_ACTION": "Waiting For Customer Action",
+  "RETRY_DELIVERY": "Retry Delivery - The Customer Is Not in the Address",
+  "POSTPONED": "Postponed - The Customer Requested Postponement for Another Day",
+  "CUSTOMER_NOT_ANSWERING": "Customer Is Not Answering",
+  "DELIVERED_TO_SENDER": "Delivered To Sender",
+  "NOT_YET_SHIPPED": "Not Yet Shipped",
+  "DELIVERED": "Delivered",
+  "CANCELLED": "Cancelled",
+
+  "Nasr City": "Nasr City",
+
+  "Amazon": "Amazon"
 }

@@ -14,15 +14,15 @@
 
   "Shipment Cancelled": "تم الغاء الشحنه",
   "Shipment Delivered": "تم تسليم الشحنة",
-  "Sipment Has Not Been Sent": "لم يتم ارسال الشحنة",
+  "Sipment Has Not Been Sent": "لم يتم تسليم الشحنة",
 
   "Sipment Created": "تم انشاء الشحنة",
   "Shipment Received by Buyer": "تم استلام الشحنة من التاجر",
   "Sipment Out For Delivary": "الشحنة خرجت للتسليم",
-  "Shipment Delivered 2": "تم الاستلام",
+  "Shipment Delivered 2": "تم التسليم",
 
   "Customer Not Present at Address": "العميل غير متواجد في العنوان",
-  "Shipment Canceled by Merchant": "تم الغاء الشحنة من التاجر",
+  "Shipment Cancelled by Merchant": "تم الغاء الشحنة من التاجر",
 
   "Shipment Address": "عنوان التسليم",
   "Is There an Issue With Your Shipment?!": "!هل يوجد مشكلة  في شحنتك ؟",
@@ -34,7 +34,26 @@
   "Branch": "الفرع",
   "Date": "التاريخ",
   "Time": "الوقت",
-  "Details": "تفاصيل",
+  "Details": "التفاصيل",
 
-  "Tracking No.": "رقم التتبع"
+  "Tracking No.": "رقم التتبع",
+
+  "Date is Not Defined": "التاريخ غير معروف",
+
+  "TICKET_CREATED": "تم إنشاء التذكرة",
+  "PACKAGE_RECEIVED": "تم استلام الحزمة",
+  "IN_TRANSIT": "قيد الانتقال",
+  "OUT_FOR_DELIVERY": "جاهزة للتوصيل",
+  "WAITING_FOR_CUSTOMER_ACTION": "بانتظار تفاعل العميل",
+  "RETRY_DELIVERY": "محاولة توصيل مرة أخرى - العميل غير متواجد في العنوان",
+  "POSTPONED": "تأجيل - طلب العميل تأجيل التوصيل ليوم آخر",
+  "CUSTOMER_NOT_ANSWERING": "العميل غير متجاوب",
+  "DELIVERED_TO_SENDER": "تم التوصيل إلى المرسل",
+  "NOT_YET_SHIPPED": "لم تتم الشحن بعد",
+  "DELIVERED": "تم التوصيل",
+  "CANCELLED": "تم الإلغاء",
+
+  "Nasr City": "مدينة نصر",
+
+  "Amazon": "امازون"
 }

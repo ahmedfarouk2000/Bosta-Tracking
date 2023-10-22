@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
   /* background-color: aquamarine; */
-  height: 300px;
-  margin: 32px 0px;
+  min-height: 300px;
+  /* margin: 32px 0px; */
 
   margin-top: 140px;
 }
@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   padding: 32px;
+  row-gap: 16px;
 }
 
 .card-track-line {
@@ -89,7 +90,7 @@
 }
 
 .current-status-circle-big {
-  background-color: var(--main-red);
+  /* background-color: var(--main-red); */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -98,7 +99,7 @@
 }
 
 .current-status-circle-small {
-  background-color: var(--main-red);
+  /* background-color: var(--main-red); */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -125,6 +126,34 @@
 .flex-row-reverse{
   flex-direction: row-reverse;
 } */
+
+.status-text-color-green {
+  color: var(--main-green);
+}
+
+.status-text-color-yellow {
+  color: var(--main-yellow);
+}
+
+.status-text-color-red {
+  color: var(--main-red);
+}
+
+.status-background-color-green {
+  background-color: var(--main-green);
+}
+
+.status-background-color-yellow {
+  background-color: var(--main-yellow);
+}
+
+.status-background-color-red {
+  background-color: var(--main-red);
+}
+
+.status-background-color-gray {
+  background-color: var(--main-gray);
+}
 
 @media only screen and (max-width: 1024px) {
   .card-wrapper {
@@ -153,7 +182,7 @@
   .current-status-line {
     height: 100px;
     width: 6px;
-    background-color: var(--main-gray);
+    /* background-color: var(--main-gray); */
   }
 
   .card-track {
